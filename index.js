@@ -1,3 +1,13 @@
+const titleCased = () => {
+  return tutorials.map(sentence=>{
+    let letters=sentence.split(" ")
+    return letters.map(word=>{
+      return word[0].toUpperCase()+ word.slice(1)
+    }).join(" ")
+  })
+}
+
+
 const tutorials = [
   'what does the this keyword mean?',
   'What is the Constructor OO pattern?',
@@ -9,8 +19,6 @@ const tutorials = [
   'what is the difference between == and ===?',
   'what is the difference between event capturing and bubbling?',
   'what is JSONP?'
-];
+]
+titleCased(tutorials)
 
-const titleCased = () => {
-  return tutorials
-}
